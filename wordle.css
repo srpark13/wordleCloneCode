@@ -1,3 +1,6 @@
+*{
+  background-color: rgba(241, 241, 232, 0.856);
+}
 .hidden{
   display: none;
 }
@@ -9,7 +12,9 @@ body{
   height: 65px;
   font-size: 36px;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d3d6da;
+  font-family: "nyt-karnakcondensed";
+  font-weight: 700;
 }
 .gameContainer{
   display: flex;
@@ -24,29 +29,24 @@ body{
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 420px;
+  width: 500px;
+  height: 600px;
   overflow: hidden;
 }
 .boardInnerContainer{
   display: grid;
   grid-template-rows: repeat(6,1fr);
-  grid-gap: 5px;
+  grid-gap: 10px;
   width: 100%;
   height: 100%;
   padding:10px;
   box-sizing: border-box;
 }
-.controlContainer{
-  display: inherit;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
+
 .boardRow{
   display:grid;
   grid-template-columns: repeat(5,1fr);
-  grid-gap: 5px;
+  grid-gap: 10px;
   width: 100%;
   height: 100%;
   
@@ -56,15 +56,86 @@ body{
   justify-content: center;
   align-items: center;
   border:1px solid black;
-  width: 5%;
-  height: 5%;
   width: 100%;
   height: 100%;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
+  border-radius: 10%;
 }
 .unitText{
-    margin-block-start: 0;
-    margin-block-end: 0;
+  background-color: inherit;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.keyboardContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 250px;
+  overflow: hidden;
+}
+.keyboardInnerContainer{
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding:10px;
+  box-sizing: border-box;
+}
+.keyRow1{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.keyRow2{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.keyRow3{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.answer{
+  width: 200px;
+  height: 50px;
+}
+button{
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  border:0;
+  background-color: #d3d6da;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  border-radius: 10%;
+}
+.buttonHit{
+  background-color: #6aaa64; 
+  color: #ffffff;
+}
+.buttonContains{
+  background-color: #c9b458;
+  color: #ffffff;
+}
+.buttonMiss{
+  background-Color: #787c7e;
+  color: #ffffff;
+}
+.endPoint{
+  font-weight: bold;
+  font-size: 2rem;
 }
